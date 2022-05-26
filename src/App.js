@@ -2,7 +2,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 import "./App.css";
-//let result = {};
 function App() {
   const [breeds, setBreeds] = useState({});
   const [b, setB] = useState([]);
