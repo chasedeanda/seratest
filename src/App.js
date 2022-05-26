@@ -3,8 +3,9 @@ import { useEffect, useState } from "react";
 
 import "./App.css";
 function App() {
+  let arr = [];
   const [breeds, setBreeds] = useState({});
-  const [b, setB] = useState([]);
+
   useEffect(() => {
     const getData = async () => {
       let result = await axios.get("https://dog.ceo/api/breeds/list/all");
@@ -12,6 +13,16 @@ function App() {
     };
     getData();
   }, []);
+  useEffect(() => {
+    let temp = breeds;
+    console.log("temp breeds: ", breeds);
+    Object.keys(breeds).map((key, index) => {
+      console.log("breeds[key]: ", breeds[key]);
+
+      arr.push(breeds[key]);
+    });
+    console.log(arr);
+  }, [breeds]);
 
   return (
     <div className="App">
@@ -19,7 +30,7 @@ function App() {
       {Object.keys(breeds).map((key, index) => {
         return (
           <div key={index}>
-            {key}: {breeds[key]}
+            {key}: {`${breeds[key]}`}
           </div>
         );
       })}
