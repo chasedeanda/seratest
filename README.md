@@ -1,9 +1,3 @@
-# this is a sera test
+# This project is a sera test to access and display the dog api.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
+## To see code: Code is in the app.js file
